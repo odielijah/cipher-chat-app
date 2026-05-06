@@ -19,26 +19,26 @@ Cipher is a secure, real-time messaging application built with React. It uses **
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        YOUR BROWSER                          │
+│                        YOUR BROWSER                         │
 │                                                             │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │  React UI    │───▶│  crypto.js   │───▶│   api.js     │  │
-│  │  (Pages /    │    │  (Web Crypto │    │  (REST +     │  │
-│  │   Components)│    │   API)       │    │  WebSocket)  │  │
-│  └──────────────┘    └──────────────┘    └──────────────┘  │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐   │
+│  │  React UI    │───▶│  crypto.js   │───▶│   api.js     │   │
+│  │  (Pages /    │    │  (Web Crypto │    │  (REST +     │   │
+│  │   Components)│    │   API)       │    │  WebSocket)  │   │
+│  └──────────────┘    └──────────────┘    └──────────────┘   │
 │         │                   │                   │           │
 │         ▼                   ▼                   ▼           │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │  AuthContext │    │  Private Key │    │  JWT Tokens  │  │
-│  │  (session    │    │  (memory     │    │  (session    │  │
-│  │   state)     │    │   ONLY ✅)   │    │   storage)   │  │
-│  └──────────────┘    └──────────────┘    └──────────────┘  │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐   │
+│  │  AuthContext │    │  Private Key │    │  JWT Tokens  │   │
+│  │  (session    │    │  (memory     │    │  (session    │   │
+│  │   state)     │    │   ONLY ✅)   │    │   storage)   │   │
+│  └──────────────┘    └──────────────┘    └──────────────┘   │
 └─────────────────────────────────────────────────────────────┘
                               │
                     HTTPS / WSS only
                               │
 ┌─────────────────────────────────────────────────────────────┐
-│                   WHISPERBOX SERVER                          │
+│                   WHISPERBOX SERVER                         │
 │                                                             │
 │   Stores ONLY:                                              │
 │   • Encrypted ciphertext blobs      (cannot read ✅)        │
